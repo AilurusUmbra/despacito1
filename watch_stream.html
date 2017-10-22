@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- This html use video tag to watch an HLS stream with showing current time -->
+<!-- The address of stream should be set in line 8  -->
+<body>
+
+<video id="stream1" width="320" height="176" controls autoplay>
+  <source src="http://localhost/hls/stream_name.m3u8">
+  Your browser does not support HTML5 video.
+</video>
+
+<p>Current time: <span id="time"></span></p>
+
+<script>
+// Get the video element with id="stream1"
+var video1 = document.getElementById("stream1");
+
+// Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+video1.ontimeupdate = function() {getcurrentTime()};
+
+function getcurrentTime() {
+  // Display the current time of the video in a p element with id="time"
+  document.getElementById("time").innerHTML = video1.currentTime;
+}
+</script>
+
+
+</body>
+</html>
