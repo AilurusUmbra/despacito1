@@ -1,11 +1,15 @@
 //***********************************************************//
 //***********************************************************//
 //***  2017F 10/22. CS Project week6                 ********//
-//***  Stream 2 media with HLS on nginx.             ********//
+//***  hls_stream.c                                  ********//
+//***                                                ********//
+//***  Fork 2 processes to                           ********//
+//***            stream 2 media with HLS on nginx.   ********//
+//***                                                ********//
 //***  HLS is supported by Edge & Safari browser.    ********//
 //***                                                ********//
 //***  line 44 & 48 should set                       ********//
-//***                video name and stream name      ********//
+//***                  video name and stream name.   ********//
 //***                                                ********//
 //***  implement in 11.-1 RELEASED FreeBSD           ********//
 //***                                                ********//
