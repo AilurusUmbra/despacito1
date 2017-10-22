@@ -28,10 +28,13 @@ int main(){
     
     int status;
 	
-	//start nginx with specific configuration
+    //start nginx with specific configuration
+	//bind port 1935 as rtmp stream input & port 80 as stream output
     system("sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf");
 	
-	//fork 2 streaming processes
+	//you may check whether the ports are binded correct by script "sockstat -4 -l" (IPv4)
+	
+    //fork 2 streaming processes
     pid_t pid;
         if((pid = fork())<0){
             fprintf(stderr, "simple fork failed\n");
